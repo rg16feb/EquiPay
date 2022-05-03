@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OccasionsActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toTopOf="@id/createSessionBtn">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/header_occasion"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:text="MY OCCASIONS"
+            android:textColor="@color/yellow"
+            android:fontFamily="@font/cash_currency"
+
+            android:padding="10dp"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/records_status_text_View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="NO RECORDS FOUND"/>
+
+        <ListView
+            android:id="@+id/myOccasionsListView"
+            android:background="@color/yellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/occasion_activity_list_item"
+            app:layout_constraintTop_toBottomOf="@id/header_occasion" />
+
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/createSessionBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="@drawable/add_button"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

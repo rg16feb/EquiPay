@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScoreByTransaction">
+
+    <LinearLayout
+        android:id="@+id/app_layout_create_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/cash_currency"
+            android:textColor="@color/purple_500"
+            android:padding="40px"
+            android:text="Account Book"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/equal_top_rounded"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heading"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="2dp">
+
+            <LinearLayout
+                android:id="@+id/form"
+                android:layout_width="match_parent"
+                android:layout_height="591dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/submit_layout"
+                app:layout_constraintTop_toBottomOf="@+id/heading"
+                tools:layout_editor_absoluteX="10dp">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/transaction_name_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cash_currency"
+                    android:padding="20px"
+                    android:textAlignment="center"
+                    android:text="Transaction Name"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/payee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Payee"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/cash_currency"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/amountPaidValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3000"
+                            android:padding="10dp"
+                            android:textColor="@color/green"
+                            android:textStyle="bold"
+                            android:paddingEnd="10dp"
+                            android:textSize="20sp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lato_bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/add_member_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/members_textview"
+                    tools:ignore="InvalidId"
+                    tools:layout_editor_absoluteX="0dp">
+
+
+                </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+                <TextView
+                    android:id="@+id/heading_for_payee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cash_currency"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:text="Splitting the Check"
+                    android:textSize="20sp" />
+                <!--                <TextView-->
+                <!--                    android:id="@+id/paying_on_behalf_of_textview"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:padding="20px"-->
+                <!--                    android:text="Paying On Behalf Of:"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:fontFamily="@font/cash_currency"/>-->
+                <ListView
+                    android:id="@+id/payerDetails"
+                    android:background="@color/yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/split_detail_list_item"
+                    app:layout_constraintTop_toBottomOf="@id/heading_for_payee" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+            </LinearLayout> <!-- form-->
+            <LinearLayout
+                android:id="@+id/submit_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/form"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+                <Button
+                    android:id="@+id/go_to_my_occasion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/round_cornered_rectangle"
+                    android:layout_weight="1"
+                    android:text="Go To My Occasions" />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+                <Button
+                    android:id="@+id/go_to_transactions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/round_cornered_rectangle"
+                    android:layout_weight="1"
+                    android:text="My Transactions" />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.equipay.equipay">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/equi_pay_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/equi_pay_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EquiPay">
+        <activity
+            android:name=".ScoreByTransaction"
+            android:exported="false" />
+        <activity
+            android:name=".ShowScores"
+            android:exported="false" />
+        <activity
+            android:name=".CreateNewTransaction"
+            android:exported="false" />
+        <activity
+            android:name=".TransactionsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_transactions"
+            android:theme="@style/Theme.EquiPay.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".OccasionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateSession"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

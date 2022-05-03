@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/green">
+    <LinearLayout
+        android:id="@+id/frag2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/transactions_layout"
+            android:layout_width="match_parent"
+            android:layout_height="659dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/occasionTextViewHeaderFrag2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cash_currency"
+                android:gravity="center"
+                android:padding="20px"
+                android:text="OCCASION NAME"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/transactionsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cash_currency"
+                android:padding="20px"
+                android:text="My Transactions"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ListView
+                android:id="@+id/transactionsListFrag2ListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/transaction_info_list_item"/>
+
+
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/AmountPanelFrag2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="parent">
+        <TextView
+            android:id="@+id/total_amount_text_view"
+            android:background="@color/yellow"
+            android:text="TOTAL AMOUNT"
+            android:layout_width="0dp"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/total_amount_value"
+            android:background="@color/yellow"
+            android:text="0"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:padding="10dp"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"/>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/buttonPanelFrag2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="parent">
+
+            <Button
+                android:id="@+id/go_to_my_occasion_frag2"
+                android:background="@color/yellow"
+                android:text="Go To My Occasions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/new_transaction_frag2"
+                android:background="@color/yellow"
+                android:text="New Transaction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"/>
+            <Button
+                android:id="@+id/clear_dues"
+                android:background="@color/yellow"
+                android:text="Clear My Dues"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

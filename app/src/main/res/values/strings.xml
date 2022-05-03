@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EquiPay</string>
+    <string name="participants">participants</string>
+    <string name="copyrights">©EquiPay India, Inc. All Rights Reserved.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_transactions">Transactions</string>
+    <string name="tab_text_1">Members</string>
+    <string name="tab_text_2">Transactions</string>
+    <string name="tab_text_3">Past Sessions</string>
+    <string name="title_activity_occasions">OccasionsActivity</string>
+</resources>
