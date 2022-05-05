@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateNewExpense">
+
+    <LinearLayout
+        android:id="@+id/app_layout_create_Expense"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/black"
+        tools:layout_editor_absoluteX="0dp">
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/cash_currency"
+            android:textColor="@color/purple_500"
+            android:padding="40px"
+            android:text="Create New Expense"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/top_round_edged"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heading"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="2dp">
+
+            <LinearLayout
+                android:id="@+id/form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                app:layout_constraintBottom_toTopOf="@+id/submit_layout"
+                app:layout_constraintTop_toBottomOf="@+id/heading"
+                tools:layout_editor_absoluteX="10dp">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/Expense_name_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cash_currency"
+                    android:padding="20px"
+                    android:text="What's the Expense?"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/Expense_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Eg:-Food, Movie Tickets, Parking"
+                    android:minHeight="48dp"
+                    android:padding="30px"
+                    android:paddingEnd="30dp"
+                    android:textColor="@color/black" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+                <LinearLayout
+                    android:id="@+id/amountPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="parent">
+
+                    <Spinner
+                        android:id="@+id/payee_selection"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/cash_currency"
+                        android:padding="20px"
+                        android:text="Add Members"
+                        android:textColor="@color/black"
+
+                        android:textSize="16dp" />
+                    <TextView
+                        android:id="@+id/Amount_paid_textview_Expense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cash_currency"
+
+                        android:text="is Paying "
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/amountPaidValueEditText"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:hint="Eg:2500"
+                        android:minHeight="48dp"
+                        android:padding="30px"
+
+                        android:paddingEnd="30dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:inputType="number" />
+
+                </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+                <LinearLayout
+                    android:id="@+id/PayerPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="parent">
+
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/payee_"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/cash_currency"-->
+<!--                        android:padding="20px"-->
+<!--                        android:text="Who's Paying?"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="16dp" />-->
+<!--                    <Spinner-->
+<!--                        android:id="@+id/payee_selection"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:minWidth="200dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:fontFamily="@font/cash_currency"-->
+<!--                        android:padding="20px"-->
+<!--                        android:text="Add Members"-->
+<!--                        android:textColor="@color/black"-->
+
+<!--                        android:textSize="16dp" />-->
+
+                    
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/add_member_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/members_textview"
+                    tools:ignore="InvalidId"
+                    tools:layout_editor_absoluteX="0dp">
+
+                    
+
+                </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+                <TextView
+                    android:id="@+id/paying_on_behalf_of_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20px"
+                    android:text="Paying On Behalf Of:"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/cash_currency"/>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <ListView
+                    android:id="@+id/membersListToBeSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toTopOf="@id/submit_layout"
+                    android:choiceMode="multipleChoice" />
+
+
+            </LinearLayout> <!-- form-->
+            
+                <LinearLayout
+                    android:id="@+id/buttonPanelFrag1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="50dp"
+                    app:layout_constraintBottom_toTopOf="parent">
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"/>
+                    <Button
+                        android:id="@+id/createNewExpenseBtn"
+                        android:background="@drawable/round_cornered_rectangle"
+                        android:text="Create Expense"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"/>
+                    <Button
+                        android:id="@+id/cancelExpense"
+                        android:background="@drawable/round_cornered_rectangle"
+                        android:text="Cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"/>
+                
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

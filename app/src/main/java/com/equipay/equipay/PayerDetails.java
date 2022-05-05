@@ -2,7 +2,7 @@ package com.equipay.equipay;
 
 public class PayerDetails {
     String payerName;
-    float amount;
+    double amount;
 
     public String getPayerName() {
         return payerName;
@@ -12,11 +12,11 @@ public class PayerDetails {
         this.payerName = payerName;
     }
 
-    public float getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(float amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 

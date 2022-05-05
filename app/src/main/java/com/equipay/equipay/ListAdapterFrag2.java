@@ -12,29 +12,29 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class ListAdapterFrag2 extends ArrayAdapter<Transaction> {
-    public ListAdapterFrag2(Context context, ArrayList<Transaction> transactions){
-        super(context,R.layout.transaction_info_list_item,transactions);
+public class ListAdapterFrag2 extends ArrayAdapter<Expense> {
+    public ListAdapterFrag2(Context context, ArrayList<Expense> Expenses){
+        super(context,R.layout.expense_info_list_item,Expenses);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        Transaction transaction = getItem(position);
+        Expense Expense = getItem(position);
         if(convertView==null){
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.transaction_info_list_item,parent,false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.expense_info_list_item,parent,false);
         }
-        TextView transactionName = convertView.findViewById(R.id.transaction_name);
+        TextView ExpenseName = convertView.findViewById(R.id.Expense_name);
         TextView payee = convertView.findViewById(R.id.payee);
-        TextView payingFor = convertView.findViewById(R.id.payingFor);
-        TextView dateOfTransaction = convertView.findViewById(R.id.date_of_transaction);
+//        TextView payingFor = convertView.findViewById(R.id.payingFor);
+        TextView dateOfExpense = convertView.findViewById(R.id.date_of_Expense);
         TextView amt = convertView.findViewById(R.id.amountPaidValue);
 
-        transactionName.setText(transaction.getEvent());
-        payee.setText("Payee: "+transaction.getPayee());
-        payingFor.setText("Paying For Members: "+transaction.getOnBehalfOf().size());
-        dateOfTransaction.setText(transaction.getDateOfTransaction());
-        amt.setText(Float.toString(transaction.getAmount()));
+        ExpenseName.setText(Expense.getEvent());
+        payee.setText(Expense.getPayee()+" Paid for "+Expense.getOnBehalfOf().size()+" Members");
+//        payingFor.setText(Expense.getOnBehalfOf().size()+" Members");
+        dateOfExpense.setText(Expense.getDateOfExpense());
+        amt.setText("Rs. "+Double .toString(Expense.getAmount()));
         return convertView;
     }
 }

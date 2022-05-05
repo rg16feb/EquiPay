@@ -60,7 +60,7 @@ public class OccasionsActivity extends AppCompatActivity {
         binding.myOccasionsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(OccasionsActivity.this, TransactionsActivity.class);
+                Intent intent = new Intent(OccasionsActivity.this, ExpensesActivity.class);
                 intent.putExtra("My Occasion", occasionsList.get(i));
                 startActivity(intent);
                 finish();

@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/green">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/yellow">
     <LinearLayout
         android:id="@+id/frag1"
         android:layout_width="match_parent"
@@ -33,6 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/cash_currency"
+                android:gravity="center"
                 android:padding="20px"
                 android:text="My Group"
                 android:textColor="@color/black"
@@ -41,7 +43,8 @@
             <ListView
                 android:id="@+id/members_list_frag1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/black_text_list_item"/>
 
 
         </LinearLayout>

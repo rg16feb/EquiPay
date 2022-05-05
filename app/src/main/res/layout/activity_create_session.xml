@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@color/black"
+
         tools:layout_editor_absoluteX="0dp">
         <TextView
             android:id="@+id/heading"
@@ -144,15 +146,29 @@
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
-                <Button
-                    android:id="@+id/submit"
+                <LinearLayout
+                    android:id="@+id/buttonPanelFrag2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_gravity="bottom"
-                    android:background="@drawable/round_cornered_rectangle"
-                    android:text="Submit" />
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="parent">
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"/>
+                    <Button
+                        android:id="@+id/submit"
+                        android:paddingLeft="15dp"
+                        android:paddingEnd="15dp"
+                        android:text="Submit"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+
+                        android:background="@drawable/round_cornered_rectangle"/>
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

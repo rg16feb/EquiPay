@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
     <ImageView
         android:id="@+id/imageView"
@@ -21,7 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:fontFamily="@font/cash_currency_400"
+        android:textColor="@color/yellow"
         android:text="Welcome To Equipay!"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -56,6 +59,7 @@
 
     <TextView
         android:id="@+id/textView2"
+        android:textColor="@color/yellow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

@@ -29,7 +29,7 @@ public class Frag1 extends Fragment {
     Button goToMyOccasionsFrag1,addNewMemberFrag1;
     EditText newMemberInput;
     EquiPayDatabase myEquiPayDB;
-    TransactionsActivity ta = new TransactionsActivity();
+    ExpensesActivity ta = new ExpensesActivity();
     Toast t;
     @Nullable
     @Override
@@ -56,7 +56,7 @@ public class Frag1 extends Fragment {
         else {
             members = occasion.getMembers();
             occasionName.setText("* " + occasion.getOccasionName() + " *");
-            adapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_list_item_1,members);
+            adapter = new ArrayAdapter<>(view.getContext(), R.layout.black_text_list_item,members);
             membersListViewFrag1.setAdapter(adapter);
         }
         membersListViewFrag1.setClickable(true);
@@ -79,7 +79,7 @@ public class Frag1 extends Fragment {
                 members.add(memberName);
                 occasion.setMembers(members);
                 myEquiPayDB.updateMembersForOccasion(occasion);
-                adapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_list_item_1,members);
+                adapter = new ArrayAdapter<>(view.getContext(), R.layout.black_text_list_item,members);
                 membersListViewFrag1.setAdapter(adapter);
             }
         });
@@ -127,7 +127,7 @@ public class Frag1 extends Fragment {
                             startActivity(intent);
 
                         }
-                        adapter = new ArrayAdapter<>(getView().getContext(), android.R.layout.simple_list_item_1,members);
+                        adapter = new ArrayAdapter<>(getView().getContext(), R.layout.black_text_list_item,members);
                         myEquiPayDB.updateMembersForOccasion(occasion);
                         membersListViewFrag1.setAdapter(adapter);
 

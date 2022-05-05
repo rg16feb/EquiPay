@@ -17,7 +17,7 @@ public class Occasion implements Parcelable {
     String occasionId;
     String occasionName;
     ArrayList<String> members;
-    ArrayList<Transaction> transactionsList;
+    ArrayList<Expense> ExpensesList;
     String createdOnDate;
 
 
@@ -70,8 +70,8 @@ public class Occasion implements Parcelable {
         return members;
     }
 
-    public void setTransactionsList(ArrayList<Transaction> transactionsList) {
-        this.transactionsList = transactionsList;
+    public void setExpensesList(ArrayList<Expense> ExpensesList) {
+        this.ExpensesList = ExpensesList;
     }
 
     public void setCreatedOnDate(String createdOnDate) {
@@ -82,8 +82,8 @@ public class Occasion implements Parcelable {
         return createdOnDate;
     }
 
-    public ArrayList<Transaction> getTransactionsList() {
-        return transactionsList;
+    public ArrayList<Expense> getExpensesList() {
+        return ExpensesList;
     }
 
 
@@ -93,7 +93,7 @@ public class Occasion implements Parcelable {
                 "occasionId='" + occasionId + '\'' +
                 ", occasionName='" + occasionName + '\'' +
                 ", members=" + members +
-                ", transactionsList=" + transactionsList +
+                ", ExpensesList=" + ExpensesList +
                 ", createdOnDate='" + createdOnDate + '\'' +
                 '}';
     }

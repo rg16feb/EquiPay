@@ -106,7 +106,7 @@ public class CreateSession extends AppCompatActivity {
         String date = df.format(Calendar.getInstance().getTime());
         occasion = new Occasion();
         occasion.setOccasionName(occName);
-        occasion.setTransactionsList(new ArrayList<Transaction>());
+        occasion.setExpensesList(new ArrayList<Expense>());
         occasion.setMembers(members);
         occasion.setCreatedOnDate(date);
         if(myEquiPayDB.createOccasion(occasion)) {

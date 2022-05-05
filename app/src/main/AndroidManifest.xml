@@ -10,18 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EquiPay">
         <activity
-            android:name=".ScoreByTransaction"
+            android:name=".ScoreByExpense"
             android:exported="false" />
         <activity
             android:name=".ShowScores"
             android:exported="false" />
         <activity
-            android:name=".CreateNewTransaction"
+            android:name=".CreateNewExpense"
             android:exported="false" />
         <activity
-            android:name=".TransactionsActivity"
+            android:name=".ExpensesActivity"
             android:exported="false"
-            android:label="@string/title_activity_transactions"
+            android:label="@string/title_activity_Expenses"
             android:theme="@style/Theme.EquiPay.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />

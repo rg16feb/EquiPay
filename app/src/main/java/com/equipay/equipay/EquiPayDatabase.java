@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class EquiPayDatabase extends SQLiteOpenHelper {
 
-    TransactionTable transactionTable = new TransactionTable();
+    ExpenseTable ExpenseTable = new ExpenseTable();
     OccasionTable occasionTable = new OccasionTable();
     // Occasion Table Variables
     String occasionId = occasionTable.getOccasionID();
@@ -19,15 +19,15 @@ public class EquiPayDatabase extends SQLiteOpenHelper {
     String members = occasionTable.getMembers();
     String occasionTableTableName = occasionTable.getTableName();
 
-    // Transaction Table Variables
-    String transactionTableTableName = transactionTable.getTableName();
-    String transactionEvent = transactionTable.getTransactionEvent();
-    String transactionId = transactionTable.getTransactionId();
-    String payee = transactionTable.getPayee();
-    String amount = transactionTable.getAmount();
-    String behalfOf = transactionTable.getBehalfOf();
-    String dateOfTransaction = transactionTable.getDateOfTransaction();
-    String occasionIdFK = transactionTable.getOccasionIdFK();
+    // Expense Table Variables
+    String ExpenseTableTableName = ExpenseTable.getTableName();
+    String ExpenseEvent = ExpenseTable.getExpenseEvent();
+    String ExpenseId = ExpenseTable.getExpenseId();
+    String payee = ExpenseTable.getPayee();
+    String amount = ExpenseTable.getAmount();
+    String behalfOf = ExpenseTable.getBehalfOf();
+    String dateOfExpense = ExpenseTable.getDateOfExpense();
+    String occasionIdFK = ExpenseTable.getOccasionIdFK();
 
     public EquiPayDatabase(Context context){
         super(context,new OccasionTable().getTableName(),null,1);
@@ -35,16 +35,16 @@ public class EquiPayDatabase extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTransactionTable = createTransactionTableQuery();
+        String createExpenseTable = createExpenseTableQuery();
         String createOccasionTable = createOccasionTableQuery();
         db.execSQL(createOccasionTable);
-        db.execSQL(createTransactionTable);
+        db.execSQL(createExpenseTable);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP IF TABLE EXISTS "+new OccasionTable().getTableName());
-        db.execSQL("DROP IF TABLE EXISTS "+new TransactionTable().getTableName());
+        db.execSQL("DROP IF TABLE EXISTS "+new ExpenseTable().getTableName());
         onCreate(db);
     }
 
@@ -71,19 +71,19 @@ public class EquiPayDatabase extends SQLiteOpenHelper {
         }
     }
 
-    public String createTransactionTableQuery(){
+    public String createExpenseTableQuery(){
 
-        String createTransactionTableQuery =
-                "CREATE TABLE "+transactionTableTableName +"("+
-                        transactionId+" INTEGER PRIMARY KEY AUTOINCREMENT," +
-                        transactionEvent+" TEXT NOT NULL," +
+        String createExpenseTableQuery =
+                "CREATE TABLE "+ExpenseTableTableName +"("+
+                        ExpenseId+" INTEGER PRIMARY KEY AUTOINCREMENT," +
+                        ExpenseEvent+" TEXT NOT NULL," +
                         occasionIdFK+" INTEGER NOT NULL, "+
                         payee+" TEXT NOT NULL," +
                         amount+" REAL NOT NULL," +
                         behalfOf+" TEXT NOT NULL," +
-                        dateOfTransaction+" TEXT NOT NULL," +
+                        dateOfExpense+" TEXT NOT NULL," +
                         "FOREIGN KEY ("+occasionIdFK+") REFERENCES "+occasionTableTableName+"("+occasionId+"))";
-        return createTransactionTableQuery;
+        return createExpenseTableQuery;
     }
 
     public String createOccasionTableQuery(){
@@ -109,8 +109,8 @@ public class EquiPayDatabase extends SQLiteOpenHelper {
         db.delete(occasionTableTableName, "OccasionId=?",new String[]{occasion.getOccasionId()});
         db.close();
     }
-    public boolean createNewTransaction(Transaction transaction){
-        ArrayList<String> membersList = transaction.getOnBehalfOf();
+    public boolean createNewExpense(Expense Expense){
+        ArrayList<String> membersList = Expense.getOnBehalfOf();
         String memberString = "";
         for (String memberName:membersList){
             memberString+=memberName;
@@ -120,14 +120,14 @@ public class EquiPayDatabase extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put(transactionEvent,transaction.getEvent());
-        contentValues.put(occasionId, transaction.getOccasionId());
-        contentValues.put(payee, transaction.getPayee());
-        contentValues.put(amount, transaction.getAmount());
+        contentValues.put(ExpenseEvent,Expense.getEvent());
+        contentValues.put(occasionId, Expense.getOccasionId());
+        contentValues.put(payee, Expense.getPayee());
+        contentValues.put(amount, Expense.getAmount());
         contentValues.put(behalfOf, memberString);
-        contentValues.put(dateOfTransaction,transaction.getDateOfTransaction());
+        contentValues.put(dateOfExpense,Expense.getDateOfExpense());
 
-        long result = db.insert(transactionTableTableName,null,contentValues);
+        long result = db.insert(ExpenseTableTableName,null,contentValues);
 
         if(result == -1){
             return false;
@@ -136,10 +136,10 @@ public class EquiPayDatabase extends SQLiteOpenHelper {
             return true;
         }
     }
-    public Cursor getTransactionsByOccasionId(String occasionIdValue){
+    public Cursor getExpensesByOccasionId(String occasionIdValue){
         Integer occId = Integer.parseInt(occasionIdValue);
         SQLiteDatabase db = this.getWritableDatabase();
-        String query = "SELECT * FROM "+transactionTableTableName +" where OccasionId = "+occId;
+        String query = "SELECT * FROM "+ExpenseTableTableName +" where OccasionId = "+occId;
         System.out.println("QUERY: "+query);
         Cursor data = db.rawQuery(query,null);
         if(data.getCount()==0){
@@ -147,11 +147,11 @@ public class EquiPayDatabase extends SQLiteOpenHelper {
         }
         return data;
     }
-    public void deleteTransaction(Transaction transaction){
+    public void deleteExpense(Expense Expense){
         SQLiteDatabase db = this.getWritableDatabase();
         // on below line we are calling a method to delete our
         // course and we are comparing it with our course name.
-        db.delete(transactionTableTableName, "TransactionId=?",new String[]{transaction.getTransactionId()});
+        db.delete(ExpenseTableTableName, "ExpenseId=?",new String[]{Expense.getExpenseId()});
         db.close();
     }
 

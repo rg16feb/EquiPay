@@ -15,8 +15,8 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/Payer"
-                android:layout_width="wrap_content"
+                android:id="@+id/payer"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/cash_currency"
                 android:padding="10dp"
@@ -24,13 +24,15 @@
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
-            <ListView
+            <TextView
                 android:id="@+id/account_book_detail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/cash_currency"
                 android:padding="10dp"
-                android:textSize="10sp" />
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:text="\tOwes Rohan - 3000"/>
         </LinearLayout>
     </RelativeLayout>
 
