@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/cash_currency"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/yellow_200"
             android:padding="40px"
             android:text="Create New Expense"
             android:textSize="24sp" />
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/top_round_edged"
+            android:background="@drawable/equal_top_rounded"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/heading"
             app:layout_constraintVertical_bias="0.0"
@@ -56,18 +56,23 @@
                     android:fontFamily="@font/cash_currency"
                     android:padding="20px"
                     android:text="What's the Expense?"
-                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/white"
+
                     android:textSize="16dp" />
 
                 <EditText
                     android:id="@+id/Expense_name"
+                    android:background="@drawable/edit_text_design"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="Eg:-Food, Movie Tickets, Parking"
                     android:minHeight="48dp"
                     android:padding="30px"
+                    android:textColorHint="@color/gray"
                     android:paddingEnd="30dp"
-                    android:textColor="@color/black" />
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/white" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -78,40 +83,48 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toTopOf="parent">
-
+                    <Space
+                        android:layout_height="match_parent"
+                        android:layout_width="10dp"/>
                     <Spinner
                         android:id="@+id/payee_selection"
                         android:layout_width="wrap_content"
-                        android:layout_weight="3"
+                        android:background="@drawable/edit_text_design"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/cash_currency"
                         android:padding="20px"
                         android:text="Add Members"
-                        android:textColor="@color/black"
+
+                        tools:listitem="@layout/spinner_item"
+                        android:textColor="@color/white"
 
                         android:textSize="16dp" />
                     <TextView
                         android:id="@+id/Amount_paid_textview_Expense"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/white"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/cash_currency"
 
                         android:text="is Paying "
                         android:layout_weight="1"
-                        android:textAlignment="center"
-                        android:textColor="@color/black" />
+                        android:textAlignment="center" />
 
                     <EditText
                         android:id="@+id/amountPaidValueEditText"
+                        android:background="@drawable/edit_text_design"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
                         android:hint="Eg:2500"
                         android:minHeight="48dp"
                         android:padding="30px"
-
+                        android:layout_marginEnd="10dp"
                         android:paddingEnd="30dp"
                         android:layout_weight="1"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/gray"
                         android:inputType="number" />
 
                 </LinearLayout>
@@ -173,7 +186,7 @@
                     android:layout_height="wrap_content"
                     android:padding="20px"
                     android:text="Paying On Behalf Of:"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/cash_currency"/>
                 <Space
                     android:layout_width="match_parent"
@@ -184,7 +197,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edit_text_design"
                     app:layout_constraintBottom_toTopOf="@id/submit_layout"
+                    tools:listitem="@layout/yellow_simple_list_item_multiple_choice"
                     android:choiceMode="multipleChoice" />
 
 

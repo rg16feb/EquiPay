@@ -24,8 +24,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="bottom"
+            android:layout_marginTop="20dp"
             android:text="MY OCCASIONS"
-            android:textColor="@color/yellow"
+            android:textColor="@color/yellow_200"
             android:fontFamily="@font/cash_currency"
 
             android:padding="10dp"/>
@@ -40,7 +41,7 @@
 
         <ListView
             android:id="@+id/myOccasionsListView"
-            android:background="@color/yellow"
+            android:background="@color/blue_700"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/occasion_activity_list_item"

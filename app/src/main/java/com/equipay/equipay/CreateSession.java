@@ -62,7 +62,7 @@ public class CreateSession extends AppCompatActivity {
             }
         });
 
-        adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1,members);
+        adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.yellow_text_list_item,members);
         membersListView.setAdapter(adapter);
 
         addMemberBtn.setOnClickListener(new View.OnClickListener() {

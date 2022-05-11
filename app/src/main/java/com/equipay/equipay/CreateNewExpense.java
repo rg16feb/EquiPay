@@ -1,6 +1,5 @@
 package com.equipay.equipay;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,8 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.equipay.equipay.databinding.ActivityCreateNewExpenseBinding;
 
@@ -54,15 +54,14 @@ public class CreateNewExpense extends AppCompatActivity {
 
          // Parsing Members data to Spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                this, android.R.layout.simple_spinner_item, members);
+                this, R.layout.spinner_item, members);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         payee = findViewById(R.id.payee_selection);
         payee.setAdapter(adapter);
         // Parsing members to be selected to ListView
         membersListToBeSelected = findViewById(R.id.membersListToBeSelected);
-        adapter = new ArrayAdapter<String>(this, 
-                android.R.layout.simple_list_item_multiple_choice,members);
+        adapter = new ArrayAdapter<String>(this, R.layout.yellow_simple_list_item_multiple_choice,members);
         membersListToBeSelected.setAdapter(adapter);
 
         // Selecting Payee from Spinner

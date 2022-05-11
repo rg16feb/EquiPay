@@ -56,7 +56,7 @@ public class Frag1 extends Fragment {
         else {
             members = occasion.getMembers();
             occasionName.setText("* " + occasion.getOccasionName() + " *");
-            adapter = new ArrayAdapter<>(view.getContext(), R.layout.black_text_list_item,members);
+            adapter = new ArrayAdapter<>(view.getContext(), R.layout.yellow_text_list_item,members);
             membersListViewFrag1.setAdapter(adapter);
         }
         membersListViewFrag1.setClickable(true);
@@ -75,11 +75,12 @@ public class Frag1 extends Fragment {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 String memberName = newMemberInput.getText().toString();
+                newMemberInput.setText("");
                 Toast.makeText(getActivity(),memberName,Toast.LENGTH_SHORT).show();
                 members.add(memberName);
                 occasion.setMembers(members);
                 myEquiPayDB.updateMembersForOccasion(occasion);
-                adapter = new ArrayAdapter<>(view.getContext(), R.layout.black_text_list_item,members);
+                adapter = new ArrayAdapter<>(view.getContext(), R.layout.yellow_text_list_item,members);
                 membersListViewFrag1.setAdapter(adapter);
             }
         });
@@ -127,7 +128,7 @@ public class Frag1 extends Fragment {
                             startActivity(intent);
 
                         }
-                        adapter = new ArrayAdapter<>(getView().getContext(), R.layout.black_text_list_item,members);
+                        adapter = new ArrayAdapter<>(getView().getContext(), R.layout.yellow_text_list_item,members);
                         myEquiPayDB.updateMembersForOccasion(occasion);
                         membersListViewFrag1.setAdapter(adapter);
 

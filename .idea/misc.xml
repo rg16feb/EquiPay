@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/drawable/add_button.xml" value="0.121" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/drawable/add_member_btn_logo.xml" value="0.1" />
+        <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/drawable/edit_text_design.xml" value="0.205" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/drawable/equa_top_rounded.xml" value="0.119" />
+        <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/drawable/equal_top_rounded.xml" value="0.205" />
+        <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/drawable/go_to_icon.xml" value="0.205" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/drawable/go_to_my_occasions.xml" value="0.108" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/drawable/ic_baseline_storage_24.xml" value="0.108" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/drawable/ic_launcher_background.xml" value="0.108" />
@@ -21,7 +24,7 @@
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/activity_expenses.xml" value="0.25" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/activity_occasions.xml" value="0.176" />
-        <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/activity_score_by_expense.xml" value="0.10104166666666667" />
+        <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/activity_score_by_expense.xml" value="0.264" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/activity_score_by_transaction.xml" value="0.176" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/activity_show_scores.xml" value="0.2" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/activity_transactions.xml" value="0.152" />
@@ -35,8 +38,12 @@
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/fragment_transactions.xml" value="0.264" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/occasion_activity_list_item.xml" value="0.2" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/on_behalf_of_list_item.xml" value="0.209375" />
+        <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/spinner_item.xml" value="0.25" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/split_detail_list_item.xml" value="0.264" />
         <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/transaction_info_list_item.xml" value="0.4" />
+        <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/layout/yellow_simple_list_item_multiple_choice.xml" value="0.25" />
+        <entry key="..\:/Users/rg16f/AndroidStudioProjects/EquiPay/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.205" />
+        <entry key="..\:/Users/rg16f/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_multiple_choice.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>

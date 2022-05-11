@@ -45,7 +45,7 @@ public class ScoreByExpense extends AppCompatActivity {
         ArrayList<String> payingOnBehalfOf = Expense.getOnBehalfOf();
         int membersCount = payingOnBehalfOf.size();
         double splitAmount = (float)(Expense.getAmount())/membersCount;
-
+        splitAmount = (double) Math.round(splitAmount * 100) / 100;
         // Setting payer Details in the list
 
         ArrayList<PayerDetails> payerDetails = new ArrayList<>();

@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:text="MY Expense"
                 android:padding="10dp"
-                android:textColor="@color/black"
+                android:textColor="@color/yellow_200"
                 android:textStyle="bold"
                 android:fontFamily="@font/cash_currency"/>
 
@@ -38,7 +38,7 @@
             android:layout_alignParentRight="true"
             android:padding="10dp"
             android:text="23 JAN 2022"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="12sp" />
     </RelativeLayout>
     <LinearLayout
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/cash_currency"
                 android:padding="10dp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:text="Payer is paying for n members"
                 android:textSize="10sp" />
         </LinearLayout>

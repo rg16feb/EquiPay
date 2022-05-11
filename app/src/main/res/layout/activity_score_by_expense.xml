@@ -19,16 +19,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/cash_currency"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/yellow_200"
             android:padding="40px"
             android:text="Account Book"
             android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="8dp"
+            android:layout_weight="1"
             android:background="@drawable/equal_top_rounded"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/heading"
@@ -56,7 +57,7 @@
                     android:padding="20px"
                     android:textAlignment="center"
                     android:text="Expense Name"
-                    android:textColor="@color/black"
+                    android:textColor="@color/yellow_200"
                     android:textSize="16dp" />
                 <Space
                     android:layout_width="0dp"
@@ -78,7 +79,7 @@
                             android:layout_height="wrap_content"
                             android:text="Payee"
                             android:padding="10dp"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textStyle="bold"
                             android:textSize="15dp"
                             android:fontFamily="@font/cash_currency"/>
@@ -124,7 +125,7 @@
                     android:fontFamily="@font/cash_currency"
                     android:paddingEnd="10dp"
                     android:paddingBottom="10dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/yellow_200"
                     android:layout_gravity="center"
                     android:textAlignment="center"
                     android:text="Splitting the Check"
@@ -139,7 +140,7 @@
                 <!--                    android:fontFamily="@font/cash_currency"/>-->
                 <ListView
                     android:id="@+id/payerDetails"
-                    android:background="@color/yellow"
+                    android:background="@color/blue_200"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:listitem="@layout/split_detail_list_item"
@@ -164,22 +165,29 @@
                     android:id="@+id/buttonPanelFrag1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toTopOf="parent">
 
                     <Button
                         android:id="@+id/go_to_my_occasion"
-                        android:background="@color/yellow"
+                        android:background="@drawable/round_cornered_rectangle"
+
                         android:text="My Occasions"
                         android:layout_width="0dp"
+                        android:layout_marginStart="10dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"/>
+                    <Space
+                        android:layout_height="match_parent"
+                        android:layout_width="10dp"/>
 
                     <Button
                         android:id="@+id/go_to_my_expenses"
-                        android:background="@color/yellow"
+                        android:background="@drawable/round_cornered_rectangle"
                         android:text="My Expenses"
                         android:layout_width="0dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"/>
 

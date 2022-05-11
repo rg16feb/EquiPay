@@ -9,7 +9,8 @@
         android:id="@+id/frag1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/blue_700">
 
         <LinearLayout
             android:id="@+id/members_layout"
@@ -26,7 +27,7 @@
                 android:gravity="center"
                 android:padding="20px"
                 android:text="OCCASION NAME"
-                android:textColor="@color/black"
+                android:textColor="@color/yellow_200"
                 android:textSize="18sp" />
 
             <TextView
@@ -37,14 +38,14 @@
                 android:gravity="center"
                 android:padding="20px"
                 android:text="My Group"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <ListView
                 android:id="@+id/members_list_frag1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/black_text_list_item"/>
+                tools:listitem="@layout/yellow_text_list_item"/>
 
 
         </LinearLayout>
@@ -57,7 +58,7 @@
 
             <Button
                 android:id="@+id/go_to_my_occasion_frag1"
-                android:background="@color/yellow"
+                android:background="@color/yellow_200"
                 android:text="Go To My Occasions"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -65,7 +66,7 @@
 
             <Button
                 android:id="@+id/add_new_member_frag1"
-                android:background="@color/yellow"
+                android:background="@color/yellow_200"
                 android:text="Add new Member"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

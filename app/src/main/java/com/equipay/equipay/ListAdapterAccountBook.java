@@ -38,7 +38,8 @@ public class ListAdapterAccountBook extends ArrayAdapter<AccountBook> {
     private String getOwesToList(ArrayList<AccountDetails> accountDetailsForPersonWhoOwes) {
         String owesToList="";
         for(AccountDetails ad:accountDetailsForPersonWhoOwes){
-            owesToList+=("- Owes "+ad.getPersonWhoWillGet()+" Rs. "+ad.getAmount()+"\n\n");
+            double amount = (double) Math.round(ad.getAmount() * 100) / 100;
+            owesToList+=("- Owes "+ad.getPersonWhoWillGet()+" Rs. "+amount+"\n\n");
         }
         owesToList = owesToList.trim();
         return owesToList;

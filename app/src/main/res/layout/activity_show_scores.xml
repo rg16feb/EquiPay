@@ -19,15 +19,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/cash_currency"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/yellow_200"
             android:padding="40px"
             android:text="Account Book"
             android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_weight="1"
             android:layout_marginBottom="8dp"
             android:background="@drawable/equal_top_rounded"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -38,7 +39,7 @@
             <LinearLayout
                 android:id="@+id/form"
                 android:layout_width="match_parent"
-                android:layout_height="591dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 app:layout_constraintBottom_toTopOf="@+id/submit_layout"
@@ -56,7 +57,7 @@
                     android:fontFamily="@font/cash_currency"
                     android:padding="20px"
                     android:text="Occasion Name"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="16dp" />
 
                 <LinearLayout
@@ -64,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-
+                    android:layout_weight="1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/members_textview"
                     tools:ignore="InvalidId"
@@ -79,8 +80,10 @@
                 <ListView
                     android:id="@+id/payerDetails"
                     android:layout_width="match_parent"
-                    android:layout_height="440dp"
-                    android:background="@color/yellow"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="20dp"
+                    android:background="@drawable/edit_text_design"
                     tools:listitem="@layout/account_score_list_item" />
 
                 <Space
@@ -104,16 +107,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
                     android:gravity="bottom"
                     app:layout_constraintBottom_toTopOf="parent">
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent"/>
+
                     <Button
                         android:id="@+id/go_to_my_occasion_show_scores"
                         android:background="@drawable/round_cornered_rectangle"
                         android:text="My Occasions"
                         android:layout_width="0dp"
+                        android:layout_marginStart="10dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"/>
                     <Space
@@ -124,11 +128,10 @@
                         android:background="@drawable/round_cornered_rectangle"
                         android:text="My Expenses"
                         android:layout_width="0dp"
+                        android:layout_marginEnd="10dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"/>
-                    <Space
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent"/>
+
 
                 </LinearLayout>
 

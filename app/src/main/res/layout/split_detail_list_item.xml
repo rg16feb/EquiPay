@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:text="Paying On Behalf"
                 android:padding="10dp"
-                android:textColor="@color/black"
+                android:textColor="@color/yellow_200"
                 android:textStyle="bold"
                 android:fontFamily="@font/cash_currency"/>
         </LinearLayout>

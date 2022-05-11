@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/cash_currency"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/yellow_200"
             android:padding="40px"
             android:text="Create New Occasion"
             android:textSize="24sp" />
@@ -39,15 +39,16 @@
             <LinearLayout
                 android:id="@+id/form"
                 android:layout_width="match_parent"
-                android:layout_height="591dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_weight="1"
                 app:layout_constraintBottom_toTopOf="@+id/submit_layout"
                 app:layout_constraintTop_toBottomOf="@+id/heading"
                 tools:layout_editor_absoluteX="10dp">
 
                 <Space
                     android:layout_width="0dp"
-                    android:layout_height="40dp" />
+                    android:layout_height="30dp" />
 
                 <TextView
                     android:id="@+id/occasion_textview"
@@ -56,18 +57,20 @@
                     android:fontFamily="@font/cash_currency"
                     android:padding="20px"
                     android:text="What's the Occasion?"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="16dp" />
 
                 <EditText
                     android:id="@+id/occasion"
+                    android:background="@drawable/edit_text_design"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="Eg:-Dinner,Trip to Bangalore"
                     android:minHeight="48dp"
+                    android:layout_marginStart="10dp"
                     android:padding="30px"
                     android:paddingEnd="30dp"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -80,7 +83,7 @@
                     android:fontFamily="@font/cash_currency"
                     android:padding="20px"
                     android:text="Add Members"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="16dp" />
                 <LinearLayout
                     android:id="@+id/add_member_layout"
@@ -94,6 +97,7 @@
 
                     <EditText
                         android:id="@+id/add_member"
+                        android:background="@drawable/edit_text_design"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="top"
@@ -101,8 +105,13 @@
                         android:minHeight="48dp"
                         android:padding="20px"
                         android:paddingEnd="80dp"
-                        android:textColor="@color/black"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/white"
                         android:textSize="16dp" />
+                    <Space
+                        android:layout_height="match_parent"
+                        android:layout_width="10dp"/>
+
 
                     <Button
                         android:id="@+id/add_member_btn"
@@ -118,21 +127,27 @@
                         android:layout_width="30dp"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
-
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
                 <TextView
                     android:id="@+id/members_present_display"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="20px"
                     android:text="No Members Present"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:fontFamily="@font/cash_currency"/>
 
                 <ListView
                     android:id="@+id/members_list"
+                    android:background="@drawable/edit_text_design"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toTopOf="@id/submit_layout" />
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    tools:listitem="@layout/yellow_text_list_item"
+                    app:layout_constraintBottom_toTopOf="@id/submit_layout"
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout> <!-- form-->
             <LinearLayout
@@ -145,7 +160,7 @@
                 tools:layout_editor_absoluteX="0dp" >
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="10dp" />
+                    android:layout_height="20dp" />
                 <LinearLayout
                     android:id="@+id/buttonPanelFrag2"
                     android:layout_width="match_parent"
@@ -169,6 +184,9 @@
                         android:layout_width="10dp"
                         android:layout_height="match_parent"/>
                 </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
