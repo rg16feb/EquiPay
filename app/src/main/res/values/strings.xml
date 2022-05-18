@@ -10,4 +10,7 @@
     <string name="tab_text_2">Expenses</string>
     <string name="tab_text_3">Past Sessions</string>
     <string name="title_activity_occasions">OccasionsActivity</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
